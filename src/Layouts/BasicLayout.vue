@@ -18,6 +18,11 @@
 
 <script setup lang="ts">
 import GlobalHeader from "@/components/GlobalHeader.vue";
+import { getCurrentUser } from "@/api/user";
+
+getCurrentUser().then((res) => {
+  console.log(res);
+});
 </script>
 
 <style scoped>
