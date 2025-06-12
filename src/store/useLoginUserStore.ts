@@ -13,6 +13,12 @@ export const useLoginUserStore = defineStore("loginUser", () => {
     if (res.data.code === 0 && res.data.data) {
       loginUser.value = res.data.data;
     }
+    // 测试
+    // else {
+    //   setTimeout(() => {
+    //     loginUser.value = { username: "未登录", id: 1 };
+    //   }, 3000);
+    // }
   }
 
   // 单独设置登录用户
