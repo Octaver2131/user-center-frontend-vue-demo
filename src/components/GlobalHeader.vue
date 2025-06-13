@@ -4,7 +4,7 @@
       <a-col flex="200px">
         <div class="title-bar">
           <img class="logo" src="../assets/logo.png" alt="logo" />
-          <div class="title">欧可可用户中心</div>
+          <div class="title">欧可可·用户中心</div>
         </div>
       </a-col>
       <a-col flex="auto">

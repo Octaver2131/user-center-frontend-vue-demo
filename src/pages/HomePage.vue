@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-const msg = "Welcome to Your Vue.js App";
+const msg = "-欧可可·用户中心-";
 </script>
 
 <style scoped>
