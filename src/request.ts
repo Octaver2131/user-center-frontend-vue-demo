@@ -1,7 +1,12 @@
 import axios from "axios";
 
+alert(process.env.NODE_ENV);
+
 const myAxios = axios.create({
-  baseURL: "http://localhost:8080",
+  baseURL:
+    process.env.NODE_ENV === "development"
+      ? "http://localhost:8080"
+      : "https://octaver.cn",
   timeout: 10000,
   withCredentials: true,
 });
