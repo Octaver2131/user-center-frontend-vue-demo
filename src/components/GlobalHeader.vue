@@ -18,7 +18,7 @@
       <a-col flex="80px">
         <div class="user-login-status">
           <div v-if="loginUserStore.loginUser.id">
-            {{ loginUserStore.loginUser }}
+            {{ loginUserStore.loginUser.username ?? "Null" }}
           </div>
           <div v-else>
             <a-button type="primary" href="/user/login">登录</a-button>
@@ -74,7 +74,11 @@ const items = ref<MenuProps["items"]>([
   },
   {
     key: "others",
-    label: h("a", { href: "https://github.com/Octaver2131" }, "联系欧可可"),
+    label: h(
+      "a",
+      { href: "https://github.com/Octaver2131", target: "_blank" },
+      "联系欧可可"
+    ),
     title: "GitHub",
   },
 ]);

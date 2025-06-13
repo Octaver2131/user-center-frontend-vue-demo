@@ -10,7 +10,6 @@
       :wrapper-col="{ span: 20 }"
       autocomplete="off"
       @finish="handleSubmit"
-      @finishFailed="onFinishFailed"
     >
       <a-form-item
         label="账号"
@@ -64,20 +63,17 @@ const loginUserStore = useLoginUserStore();
 
 const handleSubmit = async (values: any) => {
   const res = await userLogin(values);
-
+  // 登录成功，把登录态保存到全局状态中
   if (res.data.code === 0 && res.data.data) {
-    await loginUserStore.setLoginUser(res.data.data);
-    message.success("登入成功");
+    await loginUserStore.fetchLoginUser();
+    message.success("登录成功");
     router.push({
       path: "/",
       replace: true,
     });
+  } else {
+    message.error("登录失败");
   }
-  console.log("Success:", values);
-};
-
-const onFinishFailed = (errorInfo: any) => {
-  console.log("Failed:", errorInfo);
 };
 </script>
 
