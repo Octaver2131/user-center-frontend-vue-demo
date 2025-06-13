@@ -21,7 +21,7 @@ const routes: Array<RouteRecordRaw> = [
     component: UserRegisterPage,
   },
   {
-    path: "/admin/userManage",
+    path: "/admin/manage",
     name: "adminUserManage",
     component: UserManagePage,
   },
