@@ -51,6 +51,7 @@ const doDelete = async (id: string) => {
   const res = await deleteUser(id);
   if (res.data.code === 0) {
     message.success("删除成功");
+    await fetchData(searchValue.value);
   } else {
     message.error("删除失败");
   }
