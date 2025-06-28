@@ -1,24 +1,50 @@
-# user-center-frontend-vue-demo
+# 欧可可智能数据分析平台
 
-## Project setup
-```
-npm install
-```
+## 环境准备
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+安装`node_modules`依赖：
+
+```bash
+  npm install
 ```
 
-### Compiles and minifies for production
-```
-npm run build
+or
+
+```bash
+  yarn
 ```
 
-### Lints and fixes files
-```
-npm run lint
+### 提供的脚本
+欧可可用户中心 提供了一些有用的脚本来帮助你快速启动和构建web项目，进行代码风格检查和测试。
+
+脚本定义在package.json中，可以安全地修改或添加额外脚本：
+
+### 启动项目
+
+```bash
+  npm start
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 构建项目
+
+```bash
+  npm run build
+```
+
+### 代码风格检查
+
+```bash
+  npm run lint
+```
+
+你也可以使用脚本自动修复一些lint错误：
+
+```bash
+  npm run lint:fix
+```
+
+### 代码测试
+
+```bash
+  npm test
+```
